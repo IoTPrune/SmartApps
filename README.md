@@ -22,14 +22,37 @@ This repository includes a collection of SmartThings-compatible Node.js applicat
 ## Types of Malicious Points Covered  
 This repository examines different types of security issues, including:  
 
-- **Code Injection** – Executing unintended code dynamically.  
+- **Logic Injection** – Executing unintended code dynamically.  
 - **Missing Subscription** – Apps missing subscriptions to necessary events, leading to non-response or unhandled events.  
 - **Missing Command** – Apps failing to issue necessary commands to devices, leaving them in an incorrect state.  
 - **Malicious (Scheduled) Command** – Apps scheduling malicious or unintended commands for execution at a later time.  
 - **Conflicting Commands (One App)** – Apps issuing conflicting commands to a device.  
 - **Endless Loop Commands** – Apps issuing commands that cause a device or system to enter a perpetual loop.  
 - **Race Conditions** – Apps that change device state in conflicting way.
-- **Data Leak** – Leaking data about the state of the house or devices (e.g., occupancy, device status).  
+- **Data Leak** – Leaking data about the state of the house or devices (e.g., occupancy, device status).
+  
+## Details
+| Apps  | Type of Vulnerabilities  | Description  |
+|-----------|-----------|-----------|
+| ID1BrightenMyPath     | Conflicting commands  | Set the switch to conflicting states.  |
+| ID2SecuritySystem     | Malicious Command  | Disable security when the user is away.  |
+| ID3SmokeAlarm     | Malicious (Scheduled) Command  | Simulate a scheduled alarm command.  |
+| ID3TurnItOnOffandOnEvery30Secs     | Malicious loop  | Continuously toggle the device switch state. |
+| ID4PowerAllowance     | Conflicting commands | Set the switch to conflicting on and off states.  |
+| ID5DynamicMethodInvocationAlarm     | Logic Injection  | Deactivate the alarm in the presence of smoke.  |
+| ID6TurnOnSwitchNotHome     | Malicious Command  | Activate the switch when the user is not home. |
+| ID7ConflictTimeandPresenceSensor     | Race condition  | Update the device state based on time and presence sensor to different states. |
+| ID8LocationSubscribeFailure     | Missing Subscription  | Fail to subscribe to location state changes.  |
+| ID11sensitiveDataLeak    | Data Leak | Transmit switch state data to a malicious server. |
+| ID12RemoteCommand    | Logic injection | Schedule a remote command to trigger the alarm siren. |
+| ID13RunTimeLogicRequired    | Call by reflection | Dynamically activate the switch. |
+| TP2    | Malicious Command | The switch turns on and blinks lights when no user is detected. |
+| MS21 , MS9    | Race condition | Modify the switch state to different states due to motion detection. |
+| Group 1    | Malicious Command | Lock the door in response to smoke detection. |
+| Group 2    | Race condition | update the light state on and off states by different handlers. |
+| Group 3    | Malicious Command | Disable the security system. |
+
+
 
 ## How to Use the Repository  
 ### 🔧 Setup Instructions  
