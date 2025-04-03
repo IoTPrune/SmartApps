@@ -1,7 +1,7 @@
 # 📌 IoTPrune - smartapp dataset compatible with Smartthings
 
 ## Overview  
-This repository includes a collection of SmartThings-compatible Node.js applications, consisting of benign apps and malicious apps covering major [Vulnerability Types](#vulnerability-types), including both handcrafted examples from <a href="https://github.com/IoTBench/IoTBench-test-suite/tree/master/smartThings/smartThings-Soteria" target="_blank">IoTBench</a> and <a href="https://www.ndss-symposium.org/ndss-paper/iotguard-dynamic-enforcement-of-security-and-safety-policy-in-commodity-iot/" target="_blank">IoTGuard</a> and third-party apps from the SmartThings community [Smartthings community](https://community.smartthings.com/) . It serves as a valuable resource for research studies, enabling comparisons with state-of-the-art solutions.
+This repository includes a collection of SmartThings-compatible Node.js applications, consisting of benign apps and malicious apps covering major [Vulnerability Types](#vulnerability-types), including both handcrafted examples from <a href="https://github.com/IoTBench/IoTBench-test-suite/tree/master/smartThings/smartThings-Soteria" target="_blank">IoTBench</a> and <a href="https://cs.uwaterloo.ca/~yaafer/teaching/papers/ndss2019_07A-1_Celik_paper.pdf" target="_blank">IoTGuard</a> and third-party apps from the SmartThings community [Smartthings community](https://community.smartthings.com/) . It serves as a valuable resource for research studies, enabling comparisons with state-of-the-art solutions.
 
 ## Repository Structure 
 📦 IotPrune  
@@ -32,9 +32,10 @@ This repository examines different types of security issues, including:
 - **Data Leak** – Leaking data about the state of the house or devices (e.g., occupancy, device status).
   
 ## Details
+The detailed explanation of the malicious points within the SmartApps is provided in [Soteria](https://arxiv.org/pdf/1805.08876) (Table 3 and Table 4) and <a href="https://cs.uwaterloo.ca/~yaafer/teaching/papers/ndss2019_07A-1_Celik_paper.pdf" target="_blank">IoTGuard</a> (Table IV). Researchers can compare their results with these references for further insights. Additionally, we have organized and provided comprehensive information about these vulnerabilities in the malicious apps, including the type of vulnerabilities and a more detailed description, which can be found here.
 
 
-| Apps  | Type of Vulnerabilities  | Description  |
+| Apps  | Vulnerability Types  | Description  |
 |-----------|-----------|-----------|
 | ID1BrightenMyPath     | Conflicting commands  | Set the switch to conflicting states.  |
 | ID2SecuritySystem     | Malicious Command  | Disable security when the user is away.  |
@@ -72,7 +73,10 @@ To start an application, use:
     ```bash
     node <app_filename>.js
     node Malicious/ID3SmokeAlarm #example
-     
+
+4. **Result validation**
+After using the repository to validate your tool and assess its effectiveness in detecting malicious points, you can refer to the ground truth provided in [Details](#details). Locate the app by its name, and you will find detailed information about the vulnerabilities in the subsequent columns.
+   
 ##  Disclaimer  
 This repository is for **research and educational purposes only**. The malicious apps included here are **intentionally designed** to demonstrate security weaknesses in SmartThings applications.  
 Do not deploy these apps on real devices or production environments.
@@ -84,7 +88,7 @@ Here are some useful resources for understanding SmartThings security and IoT vu
 
 - [IoTBench](https://github.com/IoTBench/IoTBench-test-suite/tree/master/smartThings/smartThings-Soteria)  
 - [Smartthings community](https://community.smartthings.com/)  
-- [IoTGaurd](https://www.ndss-symposium.org/ndss-paper/iotguard-dynamic-enforcement-of-security-and-safety-policy-in-commodity-iot/)
-- 
+- [IoTGaurd](https://cs.uwaterloo.ca/~yaafer/teaching/papers/ndss2019_07A-1_Celik_paper.pdf)
+
 ## Contributing
 If you'd like to contribute to this dataset, please fork the repository and submit a pull request.  
