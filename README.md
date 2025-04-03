@@ -19,7 +19,7 @@ This repository includes a collection of SmartThings-compatible Node.js applicat
 - **`Malicious/`** → Contains **intentionally designed** SmartThings apps that exhibit different types of vulnerabilities.  
 - **`ThirdParty/`** → Contains **SmartThings community applications** that may or may not have security issues.
 
-## Types of vunarabilities
+## Vulnerability Types
 This repository examines different types of security issues, including:  
 
 - **Logic Injection** – Executing unintended code dynamically.  
@@ -32,6 +32,8 @@ This repository examines different types of security issues, including:
 - **Data Leak** – Leaking data about the state of the house or devices (e.g., occupancy, device status).
   
 ## Details
+
+
 | Apps  | Type of Vulnerabilities  | Description  |
 |-----------|-----------|-----------|
 | ID1BrightenMyPath     | Conflicting commands  | Set the switch to conflicting states.  |
