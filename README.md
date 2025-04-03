@@ -1,4 +1,4 @@
-# 📌 IoTPrune - smartapp dataset compatible with Smartthings
+# 📌 IoTPrune - smartapp dataset compatible with SmartThings
 
 ## Overview  
 This repository includes a collection of SmartThings-compatible Node.js applications, consisting of benign apps and malicious apps covering major [Vulnerability Types](#vulnerability-types), including both handcrafted examples from <a href="https://github.com/IoTBench/IoTBench-test-suite/tree/master/smartThings/smartThings-Soteria" target="_blank">IoTBench</a> and <a href="https://cs.uwaterloo.ca/~yaafer/teaching/papers/ndss2019_07A-1_Celik_paper.pdf" target="_blank">IoTGuard</a> and third-party apps from the SmartThings community [Smartthings community](https://community.smartthings.com/) . It serves as a valuable resource for research studies, enabling comparisons with state-of-the-art solutions.
@@ -87,7 +87,7 @@ Do not deploy these apps on real devices or production environments.
 Here are some useful resources for understanding SmartThings security and IoT vulnerabilities:  
 
 - [IoTBench](https://github.com/IoTBench/IoTBench-test-suite/tree/master/smartThings/smartThings-Soteria)  
-- [Smartthings community](https://community.smartthings.com/)  
+- [SmartThings community](https://community.smartthings.com/)  
 - [IoTGaurd](https://cs.uwaterloo.ca/~yaafer/teaching/papers/ndss2019_07A-1_Celik_paper.pdf)
 
 ## Contributing
