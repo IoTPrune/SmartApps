@@ -76,7 +76,21 @@ To start an application, use:
 
 4. **Result validation**
 After using the repository to validate your tool and assess its effectiveness in detecting malicious points, you can refer to the ground truth provided in [Details](#details). Locate the app by its name, and you will find detailed information about the vulnerabilities in the subsequent columns.
-   
+
+
+## Ethics Statement
+
+This repository includes SmartThings-compatible SmartApps—both benign and intentionally malicious—to support research in IoT security. We acknowledge the dual-use nature of releasing such applications: while they can aid researchers and developers in building more secure IoT systems, they could also be misused by malicious actors.
+
+We have carefully considered the risks and believe that **transparency and open access** to these test cases will do more to advance security than to pose harm. The malicious apps in this dataset are designed solely for **educational and research purposes**, and they reflect known vulnerabilities documented in academic work (e.g., Soteria, IoTGuard).
+
+By providing these examples, we aim to help:
+
+- Researchers evaluate and compare IoT security tools and techniques to state-of-art.
+- The broader community build upon prior research with up-to-date compatible apps.
+- Educators demonstrate common vulnerabilities in a safe environment.  
+
+
 ##  Disclaimer  
 This repository is for **research and educational purposes only**. The malicious apps included here are **intentionally designed** to demonstrate security weaknesses in SmartThings applications.  
 Do not deploy these apps on real devices or production environments.
